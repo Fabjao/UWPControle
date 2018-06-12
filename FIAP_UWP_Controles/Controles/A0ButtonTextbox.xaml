@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="FIAP_UWP_Controles.Controles.A0ButtonTextbox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FIAP_UWP_Controles.Controles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="1000">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="0,10">
+            <Button Content="Simples" Margin="10" />
+            <Button Margin="10" Background="Gray" Foreground="AliceBlue">
+                <StackPanel>
+                    <Image Width="30" Source="/Assets/StoreLogo.png" Height="30" />
+                    <TextBlock Text="Clique aqui" />
+                </StackPanel>
+            </Button>
+            <HyperlinkButton Content="Google" NavigateUri="http://www.google.com" Margin="10" />
+            <RepeatButton Delay="1200" Interval="100" Content="Dispara infinito" Margin="10" />
+            <ToggleButton IsChecked="True" Width="50" Height="50" Margin="10" />
+            <TextBox Text="1234" Margin="10" IsSpellCheckEnabled="False" />
+            <PasswordBox Password="1234" Margin="10" />
+            <TextBlock Text="Label" Margin="10" />
+            <RichEditBox />
+            <RichTextBlock Margin="10">
+                <Paragraph>
+                    <Italic>This is an inline image.</Italic>
+                    <LineBreak/>
+                    <InlineUIContainer>
+                        <Image Source="/Assets/StoreLogo.png" Height="30" Width="30"/>
+                    </InlineUIContainer>
+                    Mauris auctor tincidunt auctor.
+                </Paragraph>
+            </RichTextBlock>
+            <BitmapIcon UriSource="/Assets/StoreLogo.png" Width="30" Height="30" Margin="10" />
+            <!--SymbolIcon Icon="Save" /> Apenas nas AppBars -->
+            <FontIcon FontFamily="Segoe UI Symbol" Glyph="&#xE006;" />
+            <PathIcon Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Page>

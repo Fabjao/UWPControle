@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="FIAP_UWP_Controles.Controles.A13Ink"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FIAP_UWP_Controles.Controles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--<InkToolbar TargetInkCanvas="{x:Bind inkCanvas}"></InkToolbar>-->
+        <InkCanvas Grid.Row="1" x:Name="inkCanvas"></InkCanvas>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button Content="Load"  Margin="0,0,3,0" Click="OnLoadAsync"/>
+            <Button Content="Save"  Margin="0,0,3,0" Click="OnSaveAsync"/>
+            <Button Content="CustomDialog1"  Margin="0,0,3,0" Click="OnCustomDialog1"/>
+            <Button Content="CustomDialog2"  Margin="0,0,3,0" Click="OnCustomDialog2"/>
+        </StackPanel>
+    </Grid>
+</Page>

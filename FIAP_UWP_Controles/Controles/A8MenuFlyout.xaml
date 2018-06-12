@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="FIAP_UWP_Controles.Controles.A8MenuFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FIAP_UWP_Controles.Controles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Height="100" Width="100" Tapped="Rectangle_Tapped">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Red" x:Name="rectangleColor" />
+            </Rectangle.Fill>
+            <FlyoutBase.AttachedFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="Trocar cor" Click="ChangeColorItem_Click" />
+                    <MenuFlyoutSeparator />
+                    <ToggleMenuFlyoutItem Text="Ligue-me" />
+                </MenuFlyout>
+            </FlyoutBase.AttachedFlyout>
+        </Rectangle>
+    </Grid>
+</Page>

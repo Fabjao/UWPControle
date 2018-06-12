@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="FIAP_UWP_Controles.Controles.A2Lists"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FIAP_UWP_Controles.Controles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <ListView BorderBrush="Black" BorderThickness="1" Height="75">
+                <Ellipse Width="10" Height="10" Fill="Aqua" />
+                <Ellipse Width="10" Height="10" Fill="Black" />
+                <Ellipse Width="10" Height="10" Fill="#FF0000" />
+            </ListView>
+            <FlipView BorderBrush="Red" BorderThickness="1" Height="100">
+                <Ellipse Width="10" Height="10" Fill="Aqua" />
+                <Ellipse Width="10" Height="10" Fill="Black" />
+                <Ellipse Width="10" Height="10" Fill="#FF0000" />
+            </FlipView>
+            <GridView BorderBrush="Green" BorderThickness="1">
+                <!-- Usa como template um ItemsWrapGrid -->
+                <Ellipse Width="10" Height="10" Fill="Aqua" />
+                <Ellipse Width="10" Height="10" Fill="Black" />
+                <Ellipse Width="10" Height="10" Fill="#FF0000" />
+            </GridView>
+            <ListView Name="lista1" Height="75" />
+            <ListView Name="lista2" DisplayMemberPath="Nome" Height="75" />
+            <ListView Name="lista3" Height="75">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Assets/StoreLogo.png" Width="12" Margin="0,0,12,0" />
+                            <TextBlock Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackPanel>
+    </Grid>
+</Page>
